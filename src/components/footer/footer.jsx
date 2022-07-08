@@ -1,5 +1,5 @@
 
-const PageFooter = () => {
+const Footer = () => {
     return ( 
         <footer>
             <h2 >Copyright ©.</h2>
@@ -7,4 +7,4 @@ const PageFooter = () => {
     );
 }
  
-export default PageFooter;
+export default Footer;
