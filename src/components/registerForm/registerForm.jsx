@@ -3,7 +3,7 @@ import { useNavigate} from 'react-router-dom'
 const Register = () => {
     const redirect = useNavigate()
 
-    const RegisterForma = (e) => {
+    const RegisterForm = (e) => {
         e.preventDefault()
         const login = {
             email: e.target.elements.email.value,
@@ -20,17 +20,19 @@ const Register = () => {
         })
             .then(response => response.json())
             .then(data => {
-                if (data.changes !== 1) return alert('Not good')
+                if (data.changes !== 1) return alert('Email or password is not valid')
                 else {
-                    data.changes === 1 ? alert('All good'): '';
+                    // eslint-disable-next-line no-unused-expressions
+                    data.changes === 1 ? alert('Registration succesfull, you will be redirected to Login window soon'): '';
                     setTimeout(() => redirect('/login'), 1000)
                 };
             })
             .catch(err => {return alert(err)})
+
     }
 
     return (
-    <form onSubmit={RegisterForma}>
+    <form onSubmit={RegisterForm}>
         <h1>Register</h1>
         <label htmlFor="email">Email</label>
         <input type="email" name="email"/>

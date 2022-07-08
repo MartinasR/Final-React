@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const Login = () => {
     const redirect = useNavigate()
 
-    const LoginForma = (e) => {
+    const LoginForm = (e) => {
         e.preventDefault()
         const login = {
             email: e.target.elements.email.value,
@@ -29,11 +29,9 @@ const Login = () => {
                 }
             })
             .catch(err => { return alert(err) })
-
     }
-
     return (
-        <form onSubmit={LoginForma}>
+        <form onSubmit={LoginForm}>
             <h1>Login</h1>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" />
@@ -43,5 +41,4 @@ const Login = () => {
         </form>
     );
 }
-
 export default Login;

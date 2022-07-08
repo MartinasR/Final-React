@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(122, 133, 72);
+    padding: 0 1em;
+}
+
+.menuBarButtonLink{
+    background-color: rgb(218, 218, 218);
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 10%;
+    color: rgb(8, 62, 133);
+}
+
+.menuBarButtonLink:hover{
+    background-color: rgb(122, 189, 178);
+    border-radius: 40%;
+    color: rgb(120, 164, 247);
+}
+
+.MenuLinks{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
