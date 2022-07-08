@@ -23,7 +23,7 @@ const Add = () => {
                     <AddForm />
                     <PageFooter />
                 </main> </>
-                : <h4>Redirrecting ...</h4>}
+                : <h2>Redirecting</h2>}
         </>
 
     );
