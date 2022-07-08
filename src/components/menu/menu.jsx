@@ -12,7 +12,7 @@ const Menu = () => {
     return (
         <header>
             <div>
-                <img src={Logo} alt="Logo" height="50px" />
+                <img src={Logo} alt="Logo" height="70px" />
             </div>
             <div className='MenuLinks'>
                 {AuthToken ? <>
