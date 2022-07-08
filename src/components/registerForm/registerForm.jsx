@@ -1,6 +1,6 @@
 import { useNavigate} from 'react-router-dom'
 
-const Register = () => {
+const RegisterForm = () => {
     const redirect = useNavigate()
 
     const RegisterForm = (e) => {
@@ -43,4 +43,4 @@ const Register = () => {
     );
 }
 
-export default Register;
+export default RegisterForm;

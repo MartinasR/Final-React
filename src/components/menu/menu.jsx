@@ -3,8 +3,9 @@ import './menu.css'
 
 import AddLink from '../link/link'
 
-const antriLinkai = ['Home', 'Add','Logout']
 const pirmiLinkai = ['Register','Login' ]
+const antriLinkai = ['Home', 'Add','Logout']
+
 
 const Menu = () => {
     const AuthToken = localStorage.getItem('token')
@@ -15,9 +16,10 @@ const Menu = () => {
             </div>
             <div className='MenuLinks'>
                 {AuthToken ? <>
-                    {antriLinkai.map((link, i) => <AddLink props={link} key={i} />)}
-                </> : <>
                     {pirmiLinkai.map((link, i) => <AddLink props={link} key={i} />)}
+                    
+                </> : <>
+                {antriLinkai.map((link, i) => <AddLink props={link} key={i} />)}
                 </>}
             </div>
         </header >

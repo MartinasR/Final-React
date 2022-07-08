@@ -1,17 +1,14 @@
 import Menu from '../components/menu/menu'
+import Footer from '../components/footer/footer';
+import Card from '../components/card1/card';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-
-import SkillCard from '../components/card1/card';
-import Footer from '../components/footer/footer';
 
 
 const Home = () => {
     const redirect = useNavigate();
-
     const AuthToken = localStorage.getItem('token')
-
-    const [SkillsData, setSkillsData] = useState([])
+    const [Data, setData] = useState([])
 
     useEffect(() => {
         if (AuthToken === null) {
@@ -25,7 +22,7 @@ const Home = () => {
                 }
             })
                 .then(res => res.json())
-                .then(Skills => {setSkillsData(Skills)})
+                .then(Skills => {setData(Skills)})
                 .catch(err => { return alert(err) })
         }
 
@@ -34,7 +31,7 @@ const Home = () => {
     return (<>
         <Menu/>
         <main className='SkillCardTab'>
-            {SkillsData.length !==0 ? SkillsData.map(skill => <SkillCard props={skill} key={skill.id} />) : <h1>Please add information</h1>}
+            {Data.length !==0 ? Data.map(skill => <Card props={skill} key={skill.id} />) : <h1>Please add information</h1>}
         </main>
         <Footer />
     </>);
