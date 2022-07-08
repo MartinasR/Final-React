@@ -1,5 +1,5 @@
 import Menu from '../components/menu/menu'
-import LoginForm from '../components/loginForm/loginForm';
+import LoginForm from '../components/login/loginForm';
 import PageFooter from '../components/footer/footer';
 
 const Login = () => {
