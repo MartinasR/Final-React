@@ -1,5 +1,5 @@
 import Menu from '../components/menu/menu'
-import AddForm from '../components/addForm/AddForm';
+import AddForm from '../components/add/AddForm';
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react';
 import PageFooter from '../components/footer/footer';

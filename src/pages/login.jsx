@@ -1,13 +1,13 @@
 import Menu from '../components/menu/menu'
 import LoginForm from '../components/login/loginForm';
-import Footer from '../components/footer/footer';
+import PageFooter from '../components/footer/footer';
 
 const Login = () => {
     return (
         <>
             <Menu/>
             <LoginForm />
-            <Footer />
+            <PageFooter />
         </>
     );
 }
