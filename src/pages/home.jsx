@@ -2,7 +2,7 @@ import Menu from '../components/menu/menu'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import SkillCard from '../components/SkillCard/skillCard';
+import SkillCard from '../components/card1/card';
 import Footer from '../components/footer/footer';
 
 
